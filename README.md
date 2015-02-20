@@ -10,6 +10,11 @@ Includes plugins to compile and bundle Handlebars templates. For example:
   });
 ```
 
+Ember version: 1.11.0-beta.2
+Build system: gulp
+Live reload: browser-sync
+Transpiler: babel (6to5)
+
 Usage
 =====
 

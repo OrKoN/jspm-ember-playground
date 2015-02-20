@@ -11,8 +11,4 @@ Ember.Handlebars.helper('my-component', MyComponent);
 
 import tmpl from 'templates/application.hbs!ehbs';
 
-import SimpleAuth from 'ember-simple-auth';
-
-debugger;
-
 var Demo = Ember.Application.create();

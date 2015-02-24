@@ -9,6 +9,6 @@ var MyComponent = Ember.Component.extend({
 
 Ember.Handlebars.helper('my-component', MyComponent);
 
-import tmpl from 'templates/application.hbs!ehbs';
+import tmpl from 'templates/application.hbs!ihbs';
 
 var Demo = Ember.Application.create();

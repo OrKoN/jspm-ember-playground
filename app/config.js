@@ -8,7 +8,7 @@ System.config({
 
 System.config({
   "map": {
-    "ehbs": "plugin-ember-hbs/ember"
+    ehbs: "github:n-fuse/plugin-ember-hbs/ember"
   }
 });
 

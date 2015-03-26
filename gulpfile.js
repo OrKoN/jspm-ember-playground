@@ -22,6 +22,22 @@ gulp.task('jspm', function() {
   return jspm.bundleSFX('app', 'dist/app.js', { sourceMaps: false, minify: true, mangle: false });
 });
 
+gulp.task('watch-dist', ['jspm'], function () {
+  var browserSync = require('browser-sync');
+  browserSync({
+    online: false,
+    server: {
+      baseDir: ['dist']
+    }
+  });
+
+  gulp.watch([
+    'dist/**/*.*'
+  ], function(file) {
+    browserSync.reload(file.path);
+  });
+});
+
 // gulp.task('jspm', function() {
 //   return jspm.bundle('app - app/**/*.hbs', 'dist/app.js', { sourceMaps: false });
 // });

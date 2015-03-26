@@ -24,4 +24,11 @@ Usage
 
 1. Clone
 2. `npm install`
-3. `gulp watch`
+
+To run a development version (not-minified, files loaded in runtime):
+
+	`gulp watch`
+
+To run a production-ready version:
+
+	`gulp watch-dist`

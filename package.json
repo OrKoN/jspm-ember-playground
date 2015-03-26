@@ -13,7 +13,7 @@
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",
-    "jspm": "0.15.0-beta"
+    "jspm": "0.15.0"
   },
   "jspm": {
     "directories": {

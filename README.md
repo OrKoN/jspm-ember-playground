@@ -10,6 +10,15 @@ Includes plugins to compile and bundle Handlebars templates. For example:
   });
 ```
 
+Ember version: 1.11.0-beta.5
+
+Build system: gulp
+
+Live reload: browser-sync
+
+Transpiler: babel (6to5)
+
+
 Usage
 =====
 
@@ -17,4 +26,4 @@ Usage
 2. `npm install`
 3. `jspm init`
 4. `jspm install`
-6. `gulp watch`
+5. `gulp watch`

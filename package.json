@@ -7,6 +7,9 @@
     "type": "git",
     "url": ""
   },
+  "scripts": {
+    "postinstall": "jspm install"
+  },
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",

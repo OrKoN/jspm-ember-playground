@@ -24,6 +24,4 @@ Usage
 
 1. Clone
 2. `npm install`
-3. `jspm init`
-4. `jspm install`
-5. `gulp watch`
+3. `gulp watch`

@@ -1,14 +1,6 @@
-
 import Ember from 'ember';
+import tmpl from 'templates/application.hbs!ihbs'; // loaded into Ember.TEMPLATES as 'application'
 
-import layout from 'templates/component-layout.hbs!';
-
-var MyComponent = Ember.Component.extend({
-  layout: layout
-});
-
-Ember.Handlebars.helper('my-component', MyComponent);
-
-import tmpl from 'templates/application.hbs!ehbs';
+import './components/my-component';
 
 var Demo = Ember.Application.create();

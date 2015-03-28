@@ -1,6 +1,23 @@
 Basic Ember App example using JSPM
 ==========
 
+Usage
+=====
+
+1. Clone
+2. `npm install`
+
+To run a development version (not-minified, files loaded in runtime):
+
+	`gulp watch`
+
+To run a production-ready version:
+
+	`gulp watch-dist`
+
+Details
+======
+
 Includes plugins to compile and bundle Handlebars templates. For example:
 
 ```
@@ -18,17 +35,7 @@ Live reload: browser-sync
 
 Transpiler: babel (6to5)
 
+JSPM: 0.15.1
 
-Usage
-=====
 
-1. Clone
-2. `npm install`
 
-To run a development version (not-minified, files loaded in runtime):
-
-	`gulp watch`
-
-To run a production-ready version:
-
-	`gulp watch-dist`

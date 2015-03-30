@@ -7,9 +7,6 @@
     "type": "git",
     "url": "https://github.com/OrKoN/jspm-ember-playground.git"
   },
-  "scripts": {
-    "postinstall": "jspm install"
-  },
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",

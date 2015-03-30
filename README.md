@@ -27,7 +27,7 @@ Includes plugins to compile and bundle Handlebars templates. For example:
   });
 ```
 
-Ember version: 1.11.0
+Ember version: 1.12.0-beta.1
 
 Build system: gulp
 

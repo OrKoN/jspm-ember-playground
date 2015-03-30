@@ -1,7 +1,7 @@
 {
   "name": "jspm-ember",
   "version": "0.1.0",
-  "description": "Demonstration of Ember 1.11 and JSPM",
+  "description": "Demonstration of Ember 1.12-beta.1 and JSPM",
   "homepage": "",
   "repository": {
     "type": "git",
@@ -21,17 +21,18 @@
       "lib": "app"
     },
     "dependencies": {
-      "ember": "github:components/ember@1.11.0",
-      "hbs": "github:n-fuse/plugin-ember-hbs@1.11.0",
-      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.11.0",
-      "jquery": "github:components/jquery@^2.0.3"
+      "ember": "github:components/ember@1.12.0-beta.1",
+      "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.1",
+      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.1",
+      "jquery": "github:components/jquery@^2.0.3",
+      "ember-vcl-calendar": "github:ember-vcl/calendar@^0.1.0"
     },
     "devDependencies": {
       "babel": "npm:babel@^4.7.16",
       "babel-runtime": "npm:babel-runtime@^4.7.16"
     },
     "overrides": {
-      "github:components/ember@1.11.0": {
+      "github:components/ember@1.12.0-beta.1": {
         "main": "ember.debug",
         "files": [
           "ember.debug.js"

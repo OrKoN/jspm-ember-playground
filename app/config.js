@@ -2,7 +2,8 @@ System.config({
   "transpiler": "babel",
   "babelOptions": {
     "optional": [
-      "runtime"
+      "runtime",
+      "es7.decorators"
     ]
   },
   "paths": {
@@ -14,9 +15,11 @@ System.config({
 
 System.config({
   "map": {
-    "babel": "npm:babel@4.7.16",
-    "babel-runtime": "npm:babel-runtime@4.7.16",
+    "babel": "npm:babel-core@5.1.8",
+    "babel-runtime": "npm:babel-runtime@5.1.8",
+    "core-js": "npm:core-js@0.8.3",
     "ember": "github:components/ember@1.12.0-beta.1",
+    "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
     "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.1",
     "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.1",
     "jquery": "github:components/jquery@2.1.3",
@@ -32,7 +35,10 @@ System.config({
     "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.1": {
       "ember-template-compiler": "github:n-fuse/ember-template-compiler@1.12.0-beta.1"
     },
-    "npm:babel-runtime@4.7.16": {
+    "github:rwjblue/ember-computed-decorators@master": {
+      "ember": "github:components/ember@1.12.0-beta.1"
+    },
+    "npm:core-js@0.8.3": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }

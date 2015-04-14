@@ -9,11 +9,11 @@ Usage
 
 To run a development version (not-minified, files loaded in runtime):
 
-	`gulp watch`
+    gulp watch
 
 To run a production-ready version:
 
-	`gulp watch-dist`
+    gulp watch-dist
 
 FEATURES
 ======

@@ -12,6 +12,9 @@
     "gulp": "^3.8.11",
     "jspm": "^0.15.3"
   },
+  "scripts": {
+    "postinstall": "jspm install"
+  },
   "jspm": {
     "directories": {
       "baseURL": "app",

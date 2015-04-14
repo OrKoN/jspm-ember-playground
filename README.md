@@ -27,7 +27,7 @@ FEATURES
   });
   ```
 
- - Uses Ember Computed Generators
+ - Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
 
   ```javascript
   var MyComponent = Ember.Component.extend({
@@ -42,8 +42,6 @@ FEATURES
     }
   });
   ```
-
- More details here: [https://github.com/rwjblue/ember-computed-decorators](https://github.com/rwjblue/ember-computed-decorators)
 
 Packages Info
 =============

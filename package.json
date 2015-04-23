@@ -10,7 +10,7 @@
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",
-    "jspm": "^0.15.3"
+    "jspm": "^0.15.4"
   },
   "scripts": {
     "postinstall": "jspm install"
@@ -71,8 +71,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "jspm": "git://github.com/jspm/jspm-cli#0.15.4"
   }
 }

@@ -23,6 +23,7 @@ System.config({
     "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.1",
     "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.1",
     "jquery": "github:components/jquery@2.1.3",
+    "pajax": "github:n-fuse/pajax@0.1.7",
     "github:components/ember@1.12.0-beta.1": {
       "jquery": "github:components/jquery@2.1.3"
     },

@@ -9,9 +9,10 @@ var MyComponent = Ember.Component.extend({
   key: 'my-key',
 
   @computed('key')
-  testComputed(key) {
-    return key + '-computed';
+  test(key) {
+    return `${key} + computed`;
   }
+
 });
 
 Ember.Handlebars.helper('my-component', MyComponent);

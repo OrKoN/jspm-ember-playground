@@ -30,9 +30,9 @@
       "pajax": "github:n-fuse/pajax@^0.1.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.11",
-      "babel-runtime": "npm:babel-runtime@^5.1.11",
-      "core-js": "npm:core-js@^0.8.1"
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {
       "github:components/ember@1.12.0-beta.1": {

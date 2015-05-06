@@ -8,11 +8,14 @@ var MyComponent = Ember.Component.extend({
 
   key: 'my-key',
 
-  @computed('key')
-  test(key) {
-    return `${key} + computed`;
-  }
+  // @computed('key')
+  // test(key) {
+  //   return `${key} + computed`;
+  // }
 
+  test: Ember.computed('key', function() {
+    return `${this.get('key')} + computed`;
+  })
 });
 
 Ember.Handlebars.helper('my-component', MyComponent);

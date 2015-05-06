@@ -27,7 +27,7 @@ FEATURES
   });
   ```
 
- - Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
+ - [Disabled at the moment due to bugs in the dependencies.] Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
 
   ```javascript
   var MyComponent = Ember.Component.extend({
@@ -46,7 +46,7 @@ FEATURES
 Packages Info
 =============
 
-Ember version: 1.12.0-beta.1
+Ember version: 1.12.0-beta.3
 
 JSPM: 0.15.3
 

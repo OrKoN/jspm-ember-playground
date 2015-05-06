@@ -10,7 +10,8 @@
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",
-    "jspm": "^0.15.4"
+    "jspm": "^0.15.4",
+    "systemjs": "^0.16.11"
   },
   "scripts": {
     "postinstall": "jspm install"
@@ -21,10 +22,10 @@
       "lib": "app"
     },
     "dependencies": {
-      "ember": "github:components/ember@1.12.0-beta.1",
+      "ember": "github:components/ember@1.12.0-beta.3",
       "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
-      "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.1",
-      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.1",
+      "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.3",
+      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.3",
       "jquery": "github:components/jquery@^2.0.3",
       "n-fuse/pajax": "github:n-fuse/pajax@^0.1.0",
       "pajax": "github:n-fuse/pajax@^0.1.0"
@@ -35,16 +36,24 @@
       "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {
-      "github:components/ember@1.12.0-beta.1": {
+      "github:components/ember@1.12.0-beta.3": {
         "main": "ember.debug",
+        "format": "global",
         "files": [
-          "ember.debug.js"
+          "ember.debug.js",
+          "ember.prod.js"
         ],
         "dependencies": {
           "jquery": "github:components/jquery@^2.0.3"
         },
         "shim": {
           "ember.debug": {
+            "deps": [
+              "jquery"
+            ],
+            "exports": "Ember"
+          },
+          "ember.prod": {
             "deps": [
               "jquery"
             ],

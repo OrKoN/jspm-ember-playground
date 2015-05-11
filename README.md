@@ -27,7 +27,7 @@ FEATURES
   });
   ```
 
- - [Disabled at the moment due to bugs in the dependencies.] Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
+ - Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
 
   ```javascript
   var MyComponent = Ember.Component.extend({
@@ -48,15 +48,10 @@ Packages Info
 
 Ember version: 1.12.0-beta.3
 
-JSPM: 0.15.3
+JSPM: ^0.15.4
 
 Build system: gulp
 
 Live reload: browser-sync
 
 Transpiler: babel
-
-
-
-
-

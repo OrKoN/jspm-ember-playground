@@ -22,11 +22,11 @@ System.config({
     "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
     "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.3",
     "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.3",
-    "jquery": "github:components/jquery@2.1.3",
+    "jquery": "github:components/jquery@2.1.4",
     "n-fuse/pajax": "github:n-fuse/pajax@0.1.7",
     "pajax": "github:n-fuse/pajax@0.1.7",
     "github:components/ember@1.12.0-beta.3": {
-      "jquery": "github:components/jquery@2.1.3"
+      "jquery": "github:components/jquery@2.1.4"
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"

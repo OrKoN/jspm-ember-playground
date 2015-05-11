@@ -64,7 +64,7 @@
       "github:rwjblue/ember-computed-decorators@master": {
         "main": "addon/index.js",
         "files": [
-          "addon/index.js"
+          "addon/**/*"
         ],
         "dependencies": {
           "ember": "jspm:ember@*",
@@ -74,8 +74,7 @@
       "github:rwjblue/ember-new-computed@master": {
         "main": "addon/index.js",
         "files": [
-          "addon/index.js",
-          "addon/utils/can-use-new-syntax.js"
+          "addon/**/*"
         ],
         "dependencies": {
           "ember": "jspm:ember@*"

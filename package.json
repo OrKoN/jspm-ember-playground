@@ -22,13 +22,11 @@
       "lib": "app"
     },
     "dependencies": {
-      "ember": "github:components/ember@1.12.0-beta.3",
+      "ember": "github:components/ember@1.13.0-beta.1",
       "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
-      "hbs": "github:n-fuse/plugin-ember-hbs@1.12.0-beta.3",
-      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.12.0-beta.3",
-      "jquery": "github:components/jquery@^2.0.3",
-      "n-fuse/pajax": "github:n-fuse/pajax@^0.1.0",
-      "pajax": "github:n-fuse/pajax@^0.1.0"
+      "hbs": "github:n-fuse/plugin-ember-hbs@1.13.0-beta.1",
+      "ihbs": "github:n-fuse/plugin-ember-ihbs@1.13.0-beta.1",
+      "jquery": "github:components/jquery@^2.0.3"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
@@ -36,7 +34,7 @@
       "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {
-      "github:components/ember@1.12.0-beta.3": {
+      "github:components/ember@1.13.0-beta.1": {
         "main": "ember.debug",
         "format": "global",
         "files": [

@@ -10,6 +10,8 @@
   "devDependencies": {
     "browser-sync": "^1.6.3",
     "gulp": "^3.8.11",
+    "gulp-ember-template-compiler": "n-fuse/gulp-ember-template-compiler#1.13.0-beta.1",
+    "gulp-rename": "^1.2.2",
     "jspm": "^0.15.4",
     "systemjs": "^0.16.11"
   },
@@ -29,8 +31,8 @@
       "jquery": "github:components/jquery@^2.0.3"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "babel": "npm:babel-core@^5.1.11",
+      "babel-runtime": "npm:babel-runtime@^5.1.11",
       "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {

@@ -43,6 +43,8 @@ FEATURES
   });
   ```
 
+  - Additionally shows how to pre-compile Handlebars templates using [gulp-ember-template-compiler](https://github.com/n-fuse/gulp-ember-template-compiler)
+
 Packages Info
 =============
 

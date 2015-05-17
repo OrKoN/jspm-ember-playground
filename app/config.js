@@ -15,15 +15,17 @@ System.config({
 
 System.config({
   "map": {
-    "babel": "npm:babel-core@5.2.15",
-    "babel-runtime": "npm:babel-runtime@5.2.15",
-    "core-js": "npm:core-js@0.9.6",
+    "babel": "npm:babel-core@5.4.3",
+    "babel-runtime": "npm:babel-runtime@5.4.3",
+    "chbs": "github:n-fuse/plugin-ember-chbs@master",
+    "core-js": "npm:core-js@0.9.10",
     "ember": "github:components/ember@1.13.0-beta.1",
     "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
     "hbs": "github:n-fuse/plugin-ember-hbs@1.13.0-beta.1",
     "ihbs": "github:n-fuse/plugin-ember-ihbs@1.13.0-beta.1",
     "jquery": "github:components/jquery@2.1.4",
     "n-fuse/pajax": "github:n-fuse/pajax@0.1.7",
+    "n-fuse/plugin-ember-chbs": "github:n-fuse/plugin-ember-chbs@master",
     "pajax": "github:n-fuse/pajax@0.1.7",
     "github:components/ember@1.13.0-beta.1": {
       "jquery": "github:components/jquery@2.1.4"
@@ -44,7 +46,7 @@ System.config({
     "github:rwjblue/ember-new-computed@master": {
       "ember": "github:components/ember@1.13.0-beta.1"
     },
-    "npm:core-js@0.9.6": {
+    "npm:core-js@0.9.10": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }

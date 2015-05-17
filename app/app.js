@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import tmpl from 'templates/application.hbs!';
+import tmpl from 'templates/application.hbs';
 
 // loaded into Ember.TEMPLATES as 'application'
 Ember.TEMPLATES.application = tmpl;

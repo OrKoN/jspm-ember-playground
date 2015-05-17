@@ -65,15 +65,14 @@ gulp.task('watch-dist', ['jspm'], function() {
   });
 });
 
-// gulp.task('jspm', function() {
-//   return jspm.bundle('app - app/**/*.hbs', 'dist/app.js', { sourceMaps: false });
-// });
+var compiler = require('gulp-ember-template-compiler');
+var rename = require('gulp-rename');
 
-// gulp.task('build', [
-//   'jspm',
-//   'jspm-templates'
-// ]);
-
-// gulp.task('jspm-templates', function() {
-//   return jspm.bundle('app/**/*.hbs', 'dist/app-templates.js', { sourceMaps: false });
-// });
+gulp.task('templates', function() {
+  return gulp.src('app/**/*.hbs')
+    .pipe(compiler())
+    .pipe(rename(function(path) {
+      path.extname = '.hbs.js'
+    }))
+    .pipe(gulp.dest('app'));
+});

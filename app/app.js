@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import 'ember-i18n';
+
 import tmpl from 'templates/application.hbs';
 
 // loaded into Ember.TEMPLATES as 'application'

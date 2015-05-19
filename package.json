@@ -26,6 +26,7 @@
     "dependencies": {
       "ember": "github:components/ember@1.13.0-beta.1",
       "ember-computed-decorators": "github:rwjblue/ember-computed-decorators@master",
+      "ember-i18n": "github:jamesarosen/ember-i18n@3.1.1",
       "hbs": "github:n-fuse/plugin-ember-hbs@1.13.0-beta.1",
       "ihbs": "github:n-fuse/plugin-ember-ihbs@1.13.0-beta.1",
       "jquery": "github:components/jquery@^2.0.3"
@@ -76,6 +77,16 @@
         "files": [
           "addon/**/*"
         ],
+        "dependencies": {
+          "ember": "jspm:ember@*"
+        }
+      },
+      "github:jamesarosen/ember-i18n@3.1.1": {
+        "shim": {
+          "lib/i18n": [
+            "ember"
+          ]
+        },
         "dependencies": {
           "ember": "jspm:ember@*"
         }

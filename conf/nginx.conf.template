@@ -1,0 +1,34 @@
+
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+pid ROOT/pids/nginx_user.pid;
+
+http {
+    access_log  ROOT/logs/nginx_access.log;
+    error_log   ROOT/logs/nginx_error.log info;
+
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+
+    server {
+        listen 8080 ssl spdy;
+
+        ssl_certificate ROOT/conf/ssl/nginx.crt;
+        ssl_certificate_key ROOT/conf/ssl/nginx.key;
+
+        server_name  localhost;
+        charset utf-8;
+        location / {
+            root   ROOT/dist;
+            autoindex off;
+            index  index.html index.htm;
+        }
+
+    }
+}

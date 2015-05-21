@@ -1,12 +1,30 @@
-<h2> JSPM and Ember Demo </h2>
+<div class="vclApp">
 
-<p>
-  The application outlet:
-    {{outlet}}
-</p>
-<p>
-  Component in the application.hbs:
+  <h2> JSPM and Ember Demo </h2>
 
-      {{my-component}}
+  <p>
+    The application outlet:
+      {{outlet}}
+  </p>
+  <p>
+    Component in the application.hbs:
 
-</p>
+        {{my-component}}
+
+  </p>
+
+  <h2>Buttons</h2>
+
+  <div>
+    {{#vcl-button action="search" iconClassA="fa fa-search"}}
+      Search
+    {{/vcl-button}}
+  </div>
+
+  <h2> Data List </h2>
+
+  <div>
+    {{vcl-data-list items=items header="List of items" footer=false itemTemplate='data-list-item' headerTemplate='data-list-header' footerTemplate='data-list-footer' selectAction="itemSelected" selectedValue="value1" selectedItemClass="vclSelected vcl2XLarge"}}
+  </div>
+
+</div>

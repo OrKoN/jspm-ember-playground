@@ -1,2 +1,6 @@
 node_modules/*
-app/jspm_packages/*
+dist/jspm_packages/*
+dist/*
+build/*
+logs/*
+pids/*

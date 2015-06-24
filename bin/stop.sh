@@ -1,6 +1,7 @@
 #!/bin/bash
-cd "`dirname "$0"`"
-PIDFILE=nginx_user.pid
+
+cd "`dirname "$0/../"`"
+PIDFILE=pids/nginx_user.pid
 if [ -e "$PIDFILE" ]; then
     set -x
     kill `cat "$PIDFILE"`

@@ -1,30 +1,20 @@
 <div class="vclApp">
+  <h2>TODO</h2>
 
-  <h2> JSPM and Ember Demo </h2>
+  <ul>
+    {{#each items as |item|}}
+      {{todo-item data=item}}
+    {{/each}}
+  </ul>
 
-  <p>
-    The application outlet:
-      {{outlet}}
-  </p>
-  <p>
-    Component in the application.hbs:
-
-        {{my-component}}
-
-  </p>
-
-  <h2>Buttons</h2>
-
-  <div>
-    {{#vcl-button action="search" iconClassA="fa fa-search"}}
-      Search
-    {{/vcl-button}}
-  </div>
-
-  <h2> Data List </h2>
-
-  <div>
-    {{vcl-data-list items=items header="List of items" footer=false itemTemplate='data-list-item' headerTemplate='data-list-header' footerTemplate='data-list-footer' selectAction="itemSelected" selectedValue="value1" selectedItemClass="vclSelected vcl2XLarge"}}
-  </div>
+  <form class="vclForm">
+    <label class="vclFormControlLabel" for="vInputEx1">
+      New item<em class="vclRequiredIndicator">•</em>
+    </label>
+    {{input value=value id="vInputEx1" class="vclInput" type="text" placeholder="Enter item"}}
+    <button {{action 'add'}} type="button" class="vclButton">
+      <span>Add</span>
+    </button>
+  </form>
 
 </div>

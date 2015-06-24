@@ -1,5 +1,5 @@
 node_modules/*
-dist/jspm_packages/*
+build/jspm_packages/*
 dist/*
 build/*
 logs/*

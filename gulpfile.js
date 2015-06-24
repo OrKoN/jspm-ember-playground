@@ -1,30 +1,45 @@
-var gulp = require('gulp');
-var jspm = require('jspm');
-var compiler = require('gulp-ember-template-compiler');
-var rename = require('gulp-rename');
-var symlink = require('gulp-sym');
-var rimraf = require('rimraf');
-var shell = require('gulp-shell');
-var htmlmin = require('gulp-htmlmin');
-var runSequence = require('run-sequence');
-var babel = require('gulp-babel');
 var autoprefixer = require('gulp-autoprefixer');
+var babel = require('gulp-babel');
+var compiler = require('gulp-ember-template-compiler');
 var concat = require('gulp-concat');
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+var jspm = require('jspm');
 var minifyCss = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var rimraf = require('rimraf');
+var runSequence = require('run-sequence');
+var shell = require('gulp-shell');
+var sourcemaps = require('gulp-sourcemaps');
+var symlink = require('gulp-sym');
 var vclPreprocessor = require('gulp-vcl-preprocessor');
 
+function printError(error) {
+  //If you want details of the error in the console
+  console.log(error.toString());
+  this.emit('end');
+}
+
+/**
+* the default task does all setup including `jspm install`
+*/
 gulp.task('default', function(cb) {
-  runSequence('app:install', [
+  runSequence('clean', 'app:install', [
     'vcl:dev',
     'html:copy',
     'templates:compile',
     'config:copy',
     'app:copy',
-    'fonts:copy:dev'
+    'fonts:copy:dev',
+    'app:bundle'
   ], cb);
 });
 
-gulp.task('app:build', ['html:build', 'vcl'], function() {
+/**
+* Build command used jspm.Builder to provide custom `normalize`
+* hook which replaces the debug version of Ember with the production version
+*/
+gulp.task('build', ['html:build', 'vcl'], function() {
   var builder = new jspm.Builder();
   var System = require('systemjs');
 
@@ -48,9 +63,9 @@ gulp.task('app:build', ['html:build', 'vcl'], function() {
   return builder.loadConfig('jspm.config.js')
     .then(function() {
       builder.config({
-        baseURL: 'dist'
+        baseURL: 'build'
       });
-      return builder.buildSFX('app', 'build/app.js',
+      return builder.buildSFX('app', 'dist/app.js',
         {
           sourceMaps: false,
           minify: true,
@@ -62,28 +77,32 @@ gulp.task('app:build', ['html:build', 'vcl'], function() {
 gulp.task('templates:compile', function() {
   return gulp.src('app/**/*.hbs')
     .pipe(compiler())
+    .on('error', printError)
+    .pipe(babel({
+      modules: 'system'
+    }))
     .pipe(rename(function(path) {
       path.extname = '.js'
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./build'));
 });
 
 gulp.task('config:copy', function() {
   return gulp.src('jspm.config.js')
-    .pipe(symlink('dist/jspm.config.js', { force: true }))
+    .pipe(symlink('build/jspm.config.js', { force: true }))
 });
 
 gulp.task('app:copy', function() {
   return gulp.src('app/**/*.js')
+    .pipe(sourcemaps.init())
     .pipe(babel({
       modules: 'system',
       optional: [
-        'runtime',
-        'es7.decorators',
-        'es7.asyncFunctions'
+        'es7.decorators'
       ]
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('app:bundle', function() {
@@ -94,13 +113,13 @@ gulp.task('app:bundle', function() {
   console.log('\n' + moduleList + '\n');
   return jspm.bundle(moduleList, 'main-bundle.js', {
       mangle: false,
-      sourceMaps: true,
+      sourceMaps: false,
       inject: true,
       minify: true
     }).then(function() {
     console.log('Bundled');
-    return gulp.src('main-bundle.js')
-      .pipe(gulp.dest('dist'));
+    return gulp.src(['main-bundle.js'])
+      .pipe(symlink(['build/main-bundle.js'], { force: true }));
   });
 });
 
@@ -117,7 +136,7 @@ gulp.task('app:install', shell.task([
 ]));
 
 gulp.task('clean', function(cb) {
-  rimraf('./dist', cb);
+  rimraf('./build', cb);
 });
 
 gulp.task('html:build', function() {
@@ -129,32 +148,33 @@ gulp.task('html:build', function() {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html:copy', function() {
   return gulp.src('app/index.html')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('fonts:copy:dev', function() {
   return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('fonts:copy', function() {
   return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('vcl', function() {
   return gulp.src('vcl/index.styl')
+    .pipe(vclPreprocessor())
     .pipe(autoprefixer())
     .pipe(minifyCss({
       cache: true
     }))
     .pipe(concat('app.css'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('vcl:dev', function() {
@@ -162,7 +182,7 @@ gulp.task('vcl:dev', function() {
     .pipe(vclPreprocessor())
     .pipe(autoprefixer())
     .pipe(concat('app.css'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
 });
 
 gulp.task('watch', function() {

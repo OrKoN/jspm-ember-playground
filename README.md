@@ -4,56 +4,28 @@ Basic Ember App example using JSPM
 Usage
 =====
 
-1. Clone
+1. Clone the repository
 2. `npm install`
 
 To run a development version (not-minified, files loaded in runtime):
 
-    gulp watch
+    gulp
 
-To run a production-ready version:
+and open https://localhost:8080/
 
-    gulp watch-dist
+To build a production-ready version:
 
-FEATURES
-======
+    gulp build
 
- - Includes plugins to compile and bundle Handlebars templates. For example:
-
-  ```javascript
-  import tmpl from './templates/template.hbs!';
-  var Component = Ember.Component.extend({
-    layout: tmpl
-  });
-  ```
-
- - Uses [Ember Computed Decorators](https://github.com/rwjblue/ember-computed-decorators)
-
-  ```javascript
-  var MyComponent = Ember.Component.extend({
-    layout: layout,
-    tagName: 'h4',
-
-    key: 'my-key',
-
-    @computed('key')
-    testComputed(key) {
-      return key + '-computed';
-    }
-  });
-  ```
-
-  - Additionally shows how to pre-compile Handlebars templates using [gulp-ember-template-compiler](https://github.com/n-fuse/gulp-ember-template-compiler)
+and open https://localhost:8080/
 
 Packages Info
 =============
 
-Ember version: 1.12.0-beta.3
+Ember version: 1.13.2
 
-JSPM: ^0.15.4
+JSPM: ^0.15.6
 
-Build system: gulp
-
-Live reload: browser-sync
+Build system: gulp ^3.9.0
 
 Transpiler: babel

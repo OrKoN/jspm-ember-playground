@@ -2,3 +2,6 @@ node_modules/*
 build/jspm_packages/*
 dist/*
 build/*
+logs/nginx_access.log
+logs/nginx_error.log
+pids/nginx_user.pid

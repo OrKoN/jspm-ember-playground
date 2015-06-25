@@ -1,11 +1,23 @@
 Basic Ember App example using JSPM
 ==========
 
+Requirements
+===========
+
+Requires `nginx`, `realpath`.
+
 Usage
 =====
 
 1. Clone the repository
 2. `npm install`
+
+To start/stop the nginx (su):
+
+```
+  ./bin/stop.sh
+  ./bin/start.sh
+```
 
 To run a development version (not-minified, files loaded in runtime):
 

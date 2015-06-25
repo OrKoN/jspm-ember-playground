@@ -185,7 +185,7 @@ gulp.task('vcl:dev', function() {
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['app:copy', 'templates:compile', 'html:copy', 'vcl:dev'], function() {
   gulp.watch('app/**/*.js', ['app:copy']);
   gulp.watch('app/**/*.hbs', ['templates:compile']);
   gulp.watch('app/**/*.html', ['html:copy']);

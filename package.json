@@ -8,7 +8,6 @@
     "url": "https://github.com/OrKoN/jspm-ember-playground.git"
   },
   "devDependencies": {
-    "browser-sync": "^1.6.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.0",
     "gulp-babel": "^5.1.0",

@@ -1,6 +1,8 @@
 Basic Ember App example using JSPM
 ==========
 
+Blog post about this repo: [https://60devs.com/optimizing--default-jspm-workflow-with-gulp-and-nginx.html](https://60devs.com/optimizing--default-jspm-workflow-with-gulp-and-nginx.html)
+
 Requirements
 ===========
 

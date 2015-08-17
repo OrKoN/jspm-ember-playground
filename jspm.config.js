@@ -26,9 +26,9 @@ System.config({
     "babel": "npm:babel-core@5.6.5",
     "babel-runtime": "npm:babel-runtime@5.6.5",
     "core-js": "npm:core-js@0.9.18",
-    "ember": "github:components/ember@1.13.2",
+    "ember": "github:components/ember@2.0.0",
     "jquery": "github:components/jquery@2.1.4",
-    "github:components/ember@1.13.2": {
+    "github:components/ember@2.0.0": {
       "jquery": "github:components/jquery@2.1.4"
     },
     "github:jspm/nodelibs-process@0.1.1": {

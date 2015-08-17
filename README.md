@@ -36,9 +36,9 @@ and open https://localhost:8080/
 Packages Info
 =============
 
-Ember version: 1.13.2
+Ember version: 2.0.0
 
-JSPM: ^0.15.6
+JSPM: ^0.15.7
 
 Build system: gulp ^3.9.0
 
